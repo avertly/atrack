@@ -1,5 +1,5 @@
 # ATrack
-A simple system status tracking script for use with InfluxDB (and Grafana)
+A simple system status tracking script for use with InfluxDB (and Grafana).
 
 ## Screenshots
 
@@ -18,3 +18,8 @@ A simple system status tracking script for use with InfluxDB (and Grafana)
 - Learn which storage drive you use (`df -h` might be helpful), note it down
 - Change configuration parts after the `Start of configuration part` portion of script with the stuff you just noted down.
 - Run `atrack.sh` if you want to run it once, run `run.sh` (preferably in `screen`) if you want it to run repeatedly.
+
+## Using with crontab instead of run script
+- Run `crontab -e`
+- Add `* * * * * /bin/bash /path/to/script/atrack.sh > /dev/null 2>&1` to latest line.
+- Save and exit, it should work fine.
