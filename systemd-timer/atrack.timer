@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs ATrack
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=atrack.service 
+ 
+[Install]
+WantedBy=default.target 

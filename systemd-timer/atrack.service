@@ -1,0 +1,8 @@
+[Unit]
+Description=Runs ATrack
+RefuseManualStart=no
+RefuseManualStop=yes
+ 
+[Service]
+Type=oneshot
+ExecStart=/home/ave/Documents/atrack.sh 
