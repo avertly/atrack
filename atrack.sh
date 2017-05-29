@@ -80,6 +80,11 @@ d_speed=$(( ( ( br2 - br1 ) / sleep_time ) / 1024 ))
 
 printf '%s\n' "Average Network Speeds: Download: ${d_speed}KB/s, Upload: ${u_speed}KB/s"
 
+# CPU Temp
+
+cpu_temp=$(cat /sys/class/thermal/thermal_zone0/temp)
+printf '%s\n' "CPU Temperature: ${cpu_used}%"
+
 # Send to InfluxDB:
 
-curl -i -XPOST "$influxdb_ip/write?u=$influxdb_username&p=$influxdb_password&db=$influxdb_database" --data-binary "$influxdb_report_name storage_usage=${used_space//%},cpu_load=${cpu_load_average//,},cpu_percentage=$cpu_used,ram_percentage=$ram_percentage,swap_percentage=$swap_percentage,download=$d_speed,upload=$u_speed"
+curl -i -XPOST "$influxdb_ip/write?u=$influxdb_username&p=$influxdb_password&db=$influxdb_database" --data-binary "$influxdb_report_name storage_usage=${used_space//%},cpu_load=${cpu_load_average//,},cpu_percentage=$cpu_used,ram_percentage=$ram_percentage,swap_percentage=$swap_percentage,download=$d_speed,upload=$u_speed,cpu_temp=$cpu_temp"
