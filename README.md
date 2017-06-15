@@ -63,7 +63,7 @@ Memory use numbers are not particulaly useful- macOS loves to use any unused mem
 **Grafana View:**
 Linux:
 
-![The Grafana Dashboard we use](https://i.imgur.com/2IhhDhe.png)
+![The Grafana Dashboard we use](https://i.imgur.com/iAcgvbK.png)
 macOS:
 
 ![And the other for macOS](https://i.imgur.com/dP1QIvN.png)
