@@ -5,9 +5,7 @@ Use `atrack.sh` for Linux systems and `atrack-bsd.py` for BSD/macOS systems.
 
 ## Screenshots
 
-**ATrack in action:**
-
-Linux:
+#### Linux:
 
 ```           
     _ _____            _   
@@ -29,7 +27,7 @@ X-Influxdb-Version: 1.2.4
 Date: Thu, 15 Jun 2017 15:38:07 GMT
 ```
 
-BSD/macOS:
+#### BSD/macOS:
 
 ```
     _ _____            _   
@@ -60,11 +58,12 @@ Compression/Decompression refers to how macOS compresses RAM- [you can read more
 
 Memory use numbers are not particulaly useful- macOS loves to use any unused memory for caching.
 
-**Grafana View:**
-Linux:
+### Grafana View:
+#### Linux:
 
 ![The Grafana Dashboard we use](https://i.imgur.com/iAcgvbK.png)
-macOS:
+
+#### macOS:
 
 ![And the other for macOS](https://i.imgur.com/dP1QIvN.png)
 
